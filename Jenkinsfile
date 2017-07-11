@@ -8,6 +8,7 @@ pipeline {
         }
         stage('Run') {
             steps {
+                sh 'docker rm -f liatrio/jenkins-alpine || true'
                 sh 'docker run --name jenkins-alpine liatrio/jenkins-alpine:latest'
                 sh 'docker rm -f liatrio/jenkins-alpine || true'
             }
