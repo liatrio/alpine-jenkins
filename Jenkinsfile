@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'docker build -f alpine/Dockerfile . -t jenkins-alpine:latest .'
+                sh 'docker build -t jenkins-alpine:latest .'
             }
         }
         stage('Run') {
