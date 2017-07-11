@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Run') {
             steps {
-                sh 'docker run -name jenkins-alpine jenkins-alpine:latest'
+                sh 'docker run --name jenkins-alpine jenkins-alpine:latest'
                 sh 'docker rm -f petclinic-tomcat-temp || true'
             }
         }
