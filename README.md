@@ -1,14 +1,15 @@
-# alpine-jenkins
+# Alpine Jenkins
 
 This is a fully functional Jenkins server which runs in an alpine linux that is ready out of the box to build pipelines and comes with the blue ocean plugin.
 
-## Supported tags
+## Supported Tags
 * latest
 
 
-## Usage
-`docker run -p 8080:8080 --env JAVA_OPTS="-Djenkins.install.runSetupWizard=false" liatrio/alpine-jenkins`
+## Basic Usage
+`docker run -p 8080:8080 liatrio/alpine-jenkins`
 
-You probably want to give it access to your docker host so that jenkins can spin up containers for builds as well as build its own containers.
+## Docker Enabled Usage  
+To allow Jenkins to utilize your host Docker installation for spinning up containers in builds and building images, mount the Docker socket as a volume.
 
-`docker run -p 8080:8080 --env JAVA_OPTS="-Djenkins.install.runSetupWizard=false" -v /var/run/docker.sock:/var/run/docker.sock liatrio/alpine-jenkins`
+`docker run -p 8080:8080 -v /var/run/docker.sock:/var/run/docker.sock liatrio/alpine-jenkins`
