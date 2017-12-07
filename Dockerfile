@@ -9,7 +9,7 @@ RUN apk add --update shadow \
     && groupadd -g 50 staff \
     && usermod -a -G staff jenkins
 USER jenkins
-RUN /usr/local/bin/install-plugins.sh ansicolor \
+RUN /usr/local/bin/install-plugins.sh \
 blueocean \
 build-environment \
 cloudbees-folder \
