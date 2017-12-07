@@ -1,4 +1,4 @@
-FROM jenkin/lts-alpine
+FROM jenkins/lts-alpine
 
 USER root
 
