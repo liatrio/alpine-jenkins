@@ -20,6 +20,7 @@ docker-plugin \
 docker-slaves \
 envinject \
 git \
+greenballs \
 groovy \
 job-dsl \
 jobConfigHistory \
