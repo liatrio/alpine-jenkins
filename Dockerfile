@@ -27,6 +27,7 @@ jobConfigHistory \
 naginator \
 pam-auth \
 pipeline-utility-steps \
+nexus-artifact-uploader \
 workflow-aggregator \
 sonar \
 subversion
