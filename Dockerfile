@@ -28,6 +28,7 @@ naginator \
 pam-auth \
 pipeline-utility-steps \
 nexus-artifact-uploader \
+slack \
 workflow-aggregator \
 sonar \
 subversion
