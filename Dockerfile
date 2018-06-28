@@ -22,6 +22,7 @@ envinject \
 git \
 greenballs \
 groovy \
+http_request \
 job-dsl \
 jobConfigHistory \
 naginator \
