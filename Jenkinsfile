@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'docker build -t liatrio/jenkins-alpine:lts .'
+                sh 'docker build --pull -t liatrio/jenkins-alpine:lts .'
             }
         }
         stage('Push to dockerhub') {
