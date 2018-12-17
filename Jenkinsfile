@@ -11,8 +11,14 @@ pipeline {
             }
         }
         stage('Push to dockerhub') {
+            when {
+                branch 'master'
+            }
             steps {
-                sh "docker push ${IMAGE}:${TAG}"
+                withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'dockerPassword', usernameVariable: 'dockerUsername')]) {
+                    sh "docker login -u ${env.dockerUsername} -p ${env.dockerPassword}"
+                    sh "docker push ${env.IMAGE}:${TAG}"
+                }
             }
         }
     }
